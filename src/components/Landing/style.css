@@ -34,7 +34,8 @@
 }
 
 .landing h1{
-    font-size: 2.75rem;
+    font-size: 3rem;
+    letter-spacing: -.1rem;
     color: red;
 
     margin-bottom: var(--space-xs);

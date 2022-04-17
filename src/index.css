@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root{
+  --background-color: #e5eaee;
+
   --space-xxs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
@@ -20,7 +22,7 @@ body {
   width: 1400px;
   max-width: 100%;
   margin: 0 auto;
-  background-color: #e5eaee;
+  background-color: var(--background-color);
 
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
@@ -45,7 +47,40 @@ h1,h2{
   line-height: 1;
 }
 
-h2{
+h2, .display-2{
   font-size: 1.2rem;
   font-weight:700;
+  letter-spacing: -.05rem;
+  text-transform: uppercase;
+}
+
+h3, .display-3{
+  font-size: 1.2rem;
+  letter-spacing: -.05rem;
+  font-weight: 700;
+}
+
+.display-1{
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+
+hr{
+  width: 350px;
+  max-width: 100%;
+  margin: var(--space-md) auto;
+}
+
+button{
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid;
+  background: transparent;
+
+  font-weight: bold;
+  color:inherit;
+  text-transform: uppercase;
+  cursor: pointer;
 }

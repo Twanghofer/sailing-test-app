@@ -7,7 +7,10 @@ function Article({ isRelease }) {
   if (!isRelease)
     return (
       <article>
-        <p className="article-date">23 Mai 2021</p>
+        <p className="article-date">
+          <span className="material-icons">calendar_month</span>
+          23 Mai 2021
+        </p>
         <h2>News Headline</h2>
         <p className="article-body">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti

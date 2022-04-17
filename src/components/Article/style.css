@@ -3,6 +3,7 @@ article{
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     flex-basis: 25%;
     flex-grow: 1;
     gap:var(--space-xs);
@@ -22,6 +23,13 @@ article:nth-child(2){
 article >.article-date{
     color:gray;
     font-weight: bold;
+}
+
+article > .article-date > .material-icons{
+    margin-right: var(--space-xxs);
+
+    font-size: 2.15rem;
+    vertical-align: text-bottom;
 }
 
 article h2{

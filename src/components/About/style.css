@@ -1,0 +1,31 @@
+.about{
+    background-color: white;
+
+    text-align: center;
+}
+
+.about > img{
+    width: 100%;
+}
+
+.about > .about-text{
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: var(--space-xxl) var(--space-lg) 0; 
+}
+
+.about-text> div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+}
+
+.about-text p{
+    flex: 1 0 350px;
+
+    margin-top: var(--space-md);
+
+    text-align: left;
+}
