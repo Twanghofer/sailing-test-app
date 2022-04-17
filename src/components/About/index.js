@@ -52,8 +52,10 @@ function About() {
           </p>
         </div>
       </div>
-
-      <img src={Timeline} alt="Sail ship" />
+      <div className="timeline">
+        <div className="triangle"></div>
+        <img src={Timeline} alt="Sail ship" />
+      </div>
     </section>
   );
 }

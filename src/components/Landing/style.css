@@ -1,46 +1,47 @@
 .landing {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    height: 500px;
-    max-height: 75vh;
+  height: 500px;
+  max-height: 75vh;
 
-    background-position: center;
-    background-size: cover;
+  background-position: center;
+  background-size: cover;
 }
 
-.landing img{
-    position: absolute;
-    top: 0;
-    z-index: -1;
+.landing img {
+  position: absolute;
+  top: 0;
 
-    width: 100%;
-    height: 111%;
-    object-fit: cover;
+  width: 100%;
+  height: 111%;
+  object-fit: cover;
 
-    -webkit-clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
-    clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
+  -webkit-clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
+  clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
 }
 
-.landing > .text{
-    width: 400px;
-    max-width: 100%;
-    margin-left: auto;
-    padding-right:  var(--space-lg);
-    padding-top: var(--space-xxl);
+.landing > .text {
+  position: relative;
+  z-index: 1;
 
-    text-align: center;
-    box-sizing: content-box;
+  width: 400px;
+  margin-left: auto;
+  padding-right: var(--space-lg);
+  padding-top: var(--space-xxl);
+
+  text-align: center;
+  box-sizing: content-box;
 }
 
-.landing h1{
-    font-size: 3rem;
-    letter-spacing: -.1rem;
-    color: red;
+.landing h1 {
+  font-size: 3rem;
+  letter-spacing: -0.1rem;
+  color: var(--color-brand);
 
-    margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-xs);
 }
 
-.landing h2{
-    font-size: 1rem;
+.landing h2 {
+  font-size: 1rem;
 }

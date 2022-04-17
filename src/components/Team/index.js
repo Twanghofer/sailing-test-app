@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 
-import axios from "axios";
-
 function Team() {
-  const baseURL = "https://challenge-api.view.agentur-loop.com/api.php?";
-  const [page, setPage] = useState(1);
+  const API_BASE_URL = "https://challenge-api.view.agentur-loop.com/api.php?";
   const [team, setTeam] = useState([]);
   const filters = [
     {
@@ -26,33 +23,41 @@ function Team() {
     },
   ];
   const [activeFilter, setActiveFilter] = useState(filters[0]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   //get new members when filter changes
   useEffect(() => {
     setPage(1);
-    getCrewMembers().then((members) => setTeam(members));
+    getCrewMembers(1).then((members) => {
+      setTeam(members);
+    });
   }, [activeFilter]);
 
   useEffect(() => {
-    setPage(page + 1);
-  }, []);
+    if (page === 1) return;
+    getNextMembers(page);
+  }, [page]);
 
-  const getNextMembers = () => {
-    setPage(page + 1);
-    let currentTeam = team;
-    getCrewMembers().then((members) => {
-      setTeam(currentTeam.concat(members));
+  const getNextMembers = (page) => {
+    getCrewMembers(page).then((members) => {
+      if (members.length < 5) {
+      }
+      setTeam(team.concat(members));
     });
   };
 
-  const getCrewMembers = async () => {
-    let url = baseURL;
+  const getCrewMembers = async (page = 1) => {
+    let url = API_BASE_URL;
 
     url += `page=${page}&`;
     if (activeFilter.duty) url += `duty=${activeFilter.duty}`;
-    console.log(url);
-    const get = await axios.get(url);
-    return get.data.data.data;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    setTotalPages(data.data.meta.pagination.total_pages);
+    return data.data.data;
   };
 
   return (
@@ -86,7 +91,12 @@ function Team() {
           </div>
         ))}
       </div>
-      <button onClick={() => getNextMembers()}>Load more</button>
+      <button
+        className={page === totalPages ? "hidden" : ""}
+        onClick={() => setPage(page + 1)}
+      >
+        Load more
+      </button>
     </section>
   );
 }

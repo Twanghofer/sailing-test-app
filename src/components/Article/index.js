@@ -2,13 +2,14 @@ import React from "react";
 import "./style.css";
 
 import backgroundImage from "../../assets/map.svg";
+import { FaRegCalendarAlt } from "react-icons/fa";
 
 function Article({ isRelease }) {
   if (!isRelease)
     return (
       <article>
         <p className="article-date">
-          <span className="material-icons">calendar_month</span>
+          <FaRegCalendarAlt className="icon" />
           23 Mai 2021
         </p>
         <h2>News Headline</h2>
