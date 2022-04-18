@@ -18,8 +18,16 @@ function Landing() {
           sollicitudin, lorem
         </h2>
       </div>
-      <div className="landing-background">
-        <img className="background" src={SailingShip} alt="Sailing Ship" />
+      <div
+        className="landing-background"
+        style={{
+          backgroundImage: `linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0.4)
+        ),url(${SailingShip})`,
+        }}
+      >
         <img className="compass" src={Compass} alt="Compass" />
       </div>
     </section>

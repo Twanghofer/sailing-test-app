@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 
+import Member from "../Member/";
+
 function Team() {
   const API_BASE_URL = "https://challenge-api.view.agentur-loop.com/api.php?";
   const [team, setTeam] = useState([]);
@@ -78,17 +80,7 @@ function Team() {
       </div>
       <div className="member-list">
         {team.map((member, i) => (
-          <div
-            className="member"
-            style={{ zIndex: team.length - i }}
-            key={member.name}
-          >
-            <img src={member.image} alt="" />
-            <div className="member-info">
-              <p className="display-2">{member.name}</p>
-              <p>{member.duties}</p>
-            </div>
-          </div>
+          <Member member={member} zIndex={team.length - i} />
         ))}
       </div>
       <button

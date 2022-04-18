@@ -7,7 +7,7 @@
 .about > .about-text {
   width: 1024px;
   margin: 0 auto;
-  padding: var(--space-xxl) var(--space-lg) 0;
+  padding: var(--space-xxl) var(--space-md) 0;
 }
 
 .about-text > div {
@@ -27,6 +27,12 @@
 
 .timeline {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
 }
 
 .timeline > .triangle {
@@ -36,14 +42,16 @@
   z-index: 0;
 
   width: 100%;
-  height: 50%;
+  height: min(50%, 17.5vw);
   background-color: var(--color-dark);
 
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
   clip-path: polygon(0 100%, 100% 100%, 100% 0);
 }
 
-.timeline > img {
+.timeline > .timeline-img {
   position: relative;
+
+  min-width: 650px;
   z-index: 10;
 }
