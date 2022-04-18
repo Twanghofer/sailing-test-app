@@ -82,6 +82,12 @@
 .member-filter > * {
   opacity: 0.5;
   cursor: pointer;
+
+  transition: opacity 100ms ease;
+}
+
+.member-filter > *:hover {
+  opacity: 1;
 }
 
 .member-filter > .selected {
