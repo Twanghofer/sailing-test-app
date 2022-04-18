@@ -39,10 +39,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  overflow-x: hidden;
-}
-
 li {
   list-style-type: none;
 }

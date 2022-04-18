@@ -8,18 +8,20 @@ function Landing() {
   return (
     <section className="landing">
       <div className="text">
-        <h1>Lorem Ipsum Proin gravi</h1>
+        <h1>
+          Lorem Ipsum
+          <br />
+          Proin gravi
+        </h1>
         <h2>
           Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
           sollicitudin, lorem
         </h2>
       </div>
-      <img
-        className="landing-background"
-        src={SailingShip}
-        alt="Sailing Ship"
-      />
-      <img className="compass" src={Compass} alt="Compass" />
+      <div className="landing-background">
+        <img className="background" src={SailingShip} alt="Sailing Ship" />
+        <img className="compass" src={Compass} alt="Compass" />
+      </div>
     </section>
   );
 }
