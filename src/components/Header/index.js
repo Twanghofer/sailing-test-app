@@ -2,13 +2,13 @@ import React from "react";
 import Logo from "../../assets/logo.svg";
 import "./style.css";
 
-import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdMenu } from "react-icons/io";
 
 function Header() {
   return (
     <header>
       <div className="header-nav">
-        <GiHamburgerMenu className="icon" />
+        <IoMdMenu className="icon" />
         <nav>
           <ul>
             <li>

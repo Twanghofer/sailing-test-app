@@ -14,6 +14,7 @@ header > .header-nav {
   flex-direction: row;
   align-items: center;
   flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .header-nav > nav > ul {
@@ -22,9 +23,11 @@ header > .header-nav {
   gap: var(--space-lg);
 
   padding: var(--space-lg) var(--space-xl);
+
+  line-height: 1;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .header-nav nav {
     display: none;
   }
@@ -32,9 +35,11 @@ header > .header-nav {
 
 .header-nav > .icon {
   margin: var(--space-sm) var(--space-md);
+  width: 2rem;
+  height: 2rem;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 851px) {
   .header-nav > .icon {
     display: none;
   }
@@ -46,11 +51,27 @@ header > .logo {
   align-items: center;
   justify-content: flex-end;
 
-  width: min(450px, 50%);
-  padding: 0 var(--space-xl);
+  width: 375px;
+  max-width: 40%;
+  padding-right: var(--space-xl);
   background-color: var(--color-brand);
+
+  box-sizing: content-box;
 }
 
 header > .logo > img {
   max-height: 65%;
+}
+
+@media screen and (max-width: 600px) {
+  header > .logo {
+    justify-content: center;
+    max-width: unset;
+    flex-basis: 100%;
+    padding: 0 var(--space-sm);
+  }
+
+  header > .logo > img {
+    max-width: 90%;
+  }
 }
