@@ -34,9 +34,13 @@ body {
 
   color: var(--color-on-background);
   font-family: "Open Sans", sans-serif;
-  line-height: 1.5;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 li {
@@ -56,7 +60,7 @@ h3 {
 
 h1,
 h2 {
-  line-height: 1;
+  line-height: 1.1;
 }
 
 h2,

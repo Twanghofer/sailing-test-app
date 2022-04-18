@@ -6,6 +6,7 @@ footer {
   flex-wrap: wrap;
   row-gap: var(--space-md);
 
+  width: 100%;
   padding: var(--space-xl) var(--space-lg);
 
   font-weight: 600;
@@ -30,7 +31,7 @@ footer .logos {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
   footer > * {
   }
-}
+} */

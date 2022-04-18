@@ -19,9 +19,9 @@ header > .header-nav {
 .header-nav > nav > ul {
   display: flex;
   flex-direction: row;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-lg) var(--space-xl);
 }
 
 @media screen and (max-width: 800px) {
@@ -46,12 +46,11 @@ header > .logo {
   align-items: center;
   justify-content: flex-end;
 
-  width: min(350px, 5 0%);
-  padding: 0 var(--space-lg);
+  width: min(450px, 50%);
+  padding: 0 var(--space-xl);
   background-color: var(--color-brand);
 }
 
 header > .logo > img {
   max-height: 65%;
-  width: 100%;
 }

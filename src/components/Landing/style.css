@@ -2,46 +2,54 @@
   position: relative;
   z-index: 1;
 
-  height: 500px;
-  max-height: 75vh;
-
-  background-position: center;
-  background-size: cover;
+  height: min(600px, 75vh);
 }
 
-.landing img {
+.landing > .landing-background {
   position: absolute;
   top: 0;
 
   width: 100%;
   height: 111%;
   object-fit: cover;
+  object-position: center -3rem;
 
   -webkit-clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
   clip-path: polygon(0 0, 0 90%, 50% 100%, 100% 90%, 100% 0);
+}
+
+.landing > .compass {
+  position: absolute;
+  top: calc(50% + var(--space-lg));
+  right: 2.5%;
+
+  width: 475px;
+
+  transform: translate(50%, -50%);
 }
 
 .landing > .text {
   position: relative;
   z-index: 1;
 
-  width: 400px;
+  width: 600px;
   margin-left: auto;
-  padding-right: var(--space-lg);
-  padding-top: var(--space-xxl);
+  padding: var(--space-lg);
 
   text-align: center;
   box-sizing: content-box;
 }
 
 .landing h1 {
-  font-size: 3rem;
+  font-size: min(4rem, 10vw);
   letter-spacing: -0.1rem;
   color: var(--color-brand);
 
-  margin-bottom: var(--space-xs);
+  margin-top: var(--space-xxl);
+  margin-bottom: var(--space-md);
 }
 
 .landing h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.35;
 }
