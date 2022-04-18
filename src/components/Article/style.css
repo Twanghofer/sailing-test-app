@@ -12,7 +12,7 @@ article {
   padding: var(--space-md);
   padding-top: var(--space-xxl);
 
-  background-position: center;
+  background-position: center 77%;
   background-size: 250%;
 }
 
