@@ -18,6 +18,13 @@
   --space-xxl: 5.25rem;
 }
 
+@media screen and (max-width:450px) {
+  :root{
+    --space-xl: 2.75rem;
+    --space-xxl: 4rem;
+  }
+}
+
 *,
 ::after,
 ::before {
@@ -27,16 +34,36 @@
   max-width: 100%;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   width: 1400px;
   margin: 0 auto;
-  background-color: var(--color-background);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
   color: var(--color-on-background);
   font-family: "Open Sans", sans-serif;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main{
+  background-color: var(--color-background);
+}
+
+::-webkit-scrollbar {
+  width: 12px;       
+}
+
+::-webkit-scrollbar-track {
+  background:transparent;  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:rgb(212, 212, 212);
 }
 
 li {
@@ -55,13 +82,18 @@ h3 {
 }
 
 h1,
-h2 {
+h2,h3{
   line-height: 1.1;
+}
+
+.display-1 {
+  font-size: min(3.25rem, 10vw);
+  font-weight: 700;
 }
 
 h2,
 .display-2 {
-  font-size: 1.2rem;
+  font-size: min(1.3rem, 7.5vw);
   font-weight: 700;
   letter-spacing: -0.05rem;
   text-transform: uppercase;
@@ -69,15 +101,10 @@ h2,
 
 h3,
 .display-3 {
-  font-size: 1.2rem;
+  font-size: min(1.4rem, 5vw);
+  line-height: 1.25;
   letter-spacing: -0.05rem;
   font-weight: 700;
-}
-
-.display-1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.5;
 }
 
 .icon {
@@ -97,15 +124,17 @@ button {
   background: transparent;
 
   font-weight: bold;
+  font-family: inherit;
   color: inherit;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
 
 .hidden {
   display: none;
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }

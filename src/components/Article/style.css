@@ -1,3 +1,9 @@
+.news{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 article {
   position: relative;
 
@@ -10,18 +16,19 @@ article {
 
   min-width: 250px;
   padding: var(--space-md);
-  padding-top: var(--space-xxl);
+  padding-top: calc(var(--space-xxl) * 1.1);
 
-  background-position: center 77%;
-  background-size: 250%;
+  background-position: center 76%;
+  background-size: 225%;
+  cursor: pointer;
 }
 
 article:nth-child(2) {
   background-color: var(--color-dark);
-  color: var(--color-on-dark);
+  color: var(--color-background);
 }
 
-article > .article-date {
+article .article-date {
   color: gray;
   font-weight: bold;
   white-space: nowrap;
@@ -29,8 +36,8 @@ article > .article-date {
   overflow: hidden;
 }
 
-article > .article-date > .icon {
-  margin-right: var(--space-xxs);
+article .article-date > .icon {
+  margin-right: var(--space-xs);
   vertical-align: text-bottom;
 }
 
@@ -49,16 +56,20 @@ article .article-body {
 article.release {
   flex-basis: 50%;
 
-  padding: calc(var(--space-xl) * 2) var(--space-lg);
+  padding: calc(var(--space-xxl) * 1.5) var(--space-lg);
   padding-bottom: var(--space-lg);
 }
 
 article.release > .article-date {
   color: inherit;
-  font-size: 2.5rem;
+  font-size: min(3rem, 12vw);
   line-height: 1;
 }
 
+article.release >.article-date >.icon{
+  display: none;
+}
+
 article.release > h2 {
-  font-size: 2rem;
+  font-size: min(2rem, 11vw);
 }

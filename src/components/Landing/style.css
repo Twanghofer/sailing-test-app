@@ -4,7 +4,7 @@
   position: relative;
   z-index: 1;
 
-  height: min(600px, 75vh);
+  min-height: min(600px, 125vw);
 }
 
 .landing > .landing-background {
@@ -37,7 +37,7 @@
 
 .landing-background > .compass {
   position: absolute;
-  top: 60%;
+  top: 55%;
   right: 2.5%;
 
   width: 475px;
@@ -69,6 +69,8 @@
 .landing h2 {
   font-size: min(1.5rem, 5.5vw);
   line-height: 1.35;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+
 }
 
 @media screen and (max-width: 850px) {

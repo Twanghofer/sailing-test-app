@@ -5,9 +5,9 @@ import "./style.css";
 function News() {
   return (
     <section className="news">
-      <Article />
-      <Article />
-      <Article isRelease={true} />
+      <Article headline="News Headline" />
+      <Article headline="News Headline" />
+      <Article headline="Headline Beitrag 2021" isRelease={true} />
     </section>
   );
 }

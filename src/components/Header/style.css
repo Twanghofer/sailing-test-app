@@ -1,4 +1,8 @@
 header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
   display: flex;
   flex-direction: row;
 
@@ -6,8 +10,10 @@ header {
   background-color: var(--color-surface);
 
   font-weight: 700;
+  line-height: 1;
   text-transform: uppercase;
 }
+
 
 header > .header-nav {
   display: flex;
@@ -23,14 +29,16 @@ header > .header-nav {
   gap: var(--space-lg);
 
   padding: var(--space-lg) var(--space-xl);
-
-  line-height: 1;
 }
 
 @media screen and (max-width: 850px) {
   .header-nav nav {
     display: none;
   }
+}
+
+.header-nav > nav a:hover{
+  color:var(--color-brand)
 }
 
 .header-nav > .icon {

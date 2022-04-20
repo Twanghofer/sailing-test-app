@@ -21,11 +21,7 @@ function Landing() {
       <div
         className="landing-background"
         style={{
-          backgroundImage: `linear-gradient(
-          to bottom,
-          rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4),
-          rgba(255, 255, 255, 0.4)
-        ),url(${SailingShip})`,
+          backgroundImage: `url(${SailingShip})`,
         }}
       >
         <img className="compass" src={Compass} alt="Compass" />

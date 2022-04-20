@@ -9,6 +9,11 @@
   text-align: center;
 }
 
+.team > h3{
+  margin-top: var(--space-sm);
+}
+
+
 .member-list {
   --member-width: 235px;
 
@@ -21,7 +26,7 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .member-list {
     --member-width: 1fr;
   }
@@ -29,16 +34,21 @@
 
 .member-filter {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   gap: var(--space-lg);
+  row-gap:var(--space-sm);
 
   margin-top: var(--space-xl);
+  padding: 0 var(--space-md);
 
   font-weight: bold;
 }
 
 .member-filter > * {
+  position: relative;
+
   opacity: 0.5;
   cursor: pointer;
 
@@ -51,5 +61,23 @@
 
 .member-filter > .selected {
   opacity: 1;
-  border-bottom: 1px solid;
+}
+
+.member-filter > ::after {
+  content: '';
+
+  position: absolute;
+  top:100%;
+  left:50%;
+
+  width: 0;
+  height: 2px;
+  background-color: var(--color-on-dark);
+  
+  transition: width .3s ease;
+  transform: translateX(-50%);
+}
+
+.member-filter > .selected::after {
+  width: 100%;
 }

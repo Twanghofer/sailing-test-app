@@ -6,6 +6,8 @@ import Member from "../Member/";
 function Team() {
   const API_BASE_URL = "https://challenge-api.view.agentur-loop.com/api.php?";
   const [team, setTeam] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
   const filters = [
     {
       name: "Show all",
@@ -25,8 +27,6 @@ function Team() {
     },
   ];
   const [activeFilter, setActiveFilter] = useState(filters[0]);
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
 
   //get new members when filter changes
   useEffect(() => {
@@ -63,7 +63,7 @@ function Team() {
   };
 
   return (
-    <section className="team">
+    <section className="team" id="crew">
       <h2 className="display-1">Unser Team</h2>
       <h3>Subtitles von unserem Team</h3>
       <hr />
@@ -80,7 +80,7 @@ function Team() {
       </div>
       <div className="member-list">
         {team.map((member, i) => (
-          <Member member={member} zIndex={team.length - i} />
+          <Member key={member.name} member={member} zIndex={team.length - i} />
         ))}
       </div>
       <button

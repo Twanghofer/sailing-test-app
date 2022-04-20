@@ -4,7 +4,7 @@ import Timeline from "../../assets/timeline.svg";
 
 function About() {
   return (
-    <section className="about">
+    <section className="about" id="about-us">
       <div className="about-text">
         <h2 className="display-1">Headline - Lorem Ipsum</h2>
         <h3>Subtitle Lorem Ipsum</h3>

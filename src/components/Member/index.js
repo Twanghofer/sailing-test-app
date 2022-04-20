@@ -3,7 +3,7 @@ import "./style.css";
 
 function Member({ member, zIndex }) {
   return (
-    <div className="member" key={member.name} style={{ zIndex: zIndex }}>
+    <div className="member" style={{ zIndex: zIndex }}>
       <img src={member.image} alt="" />
       <div className="member-info">
         <p className="display-2">{member.name}</p>
